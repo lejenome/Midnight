@@ -9,8 +9,8 @@ The Midnight Pages demo is [here](http://lejenome.github.io/midnigth)
 
 # Install
 
-You need just to copy the content of this reposiyory to your project gh-pages
-branch and change the first inline script tag inside [index.html](index.html) file.
+You need just to copy the content of this repository to your project gh-pages
+branch and change the first inline script tag inside the [index.html](index.html) file.
 
 e.g: here is my settings for this midnight project:
 
@@ -24,6 +24,7 @@ e.g: here is my settings for this midnight project:
 # Credits
 
 Theme by [Matt Graham](http://madebygraham.com), twitter [@michigangraham](http://twitter.com/#!/michigangraham)
+
 Modified by [Moez Bouhlel](http://lejenome.github.io)
 
 # Licence

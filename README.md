@@ -10,7 +10,7 @@ The Midnight Pages demo is [here](http://lejenome.github.io/midnigth)
 # Install
 
 You need just to copy the content of this repository to your project gh-pages
-branch and change the first inline script tag inside the [index.html](index.html) file.
+branch and change the first inline script tag inside the [index.html](index.html#L20) file.
 
 e.g: here is my settings for this midnight project:
 

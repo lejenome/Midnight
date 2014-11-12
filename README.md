@@ -14,8 +14,9 @@ The Midnight Pages demo is [here](http://lejenome.github.io/midnigth)
 You just need to copy the content of this repository to your project gh-pages
 branch.
 
-Note: If your project name is not capitalized and you want to fix it, change
-```{{ site.github.project_title }}```
+Note: If your project name is not capitalized and you want to fix it, replace
+every
+```{{ site.github.project_title | xml_escape }}```
 in index.html with your project capitalized name.
 
 # Credits

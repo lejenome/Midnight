@@ -1,7 +1,9 @@
 # Midnight
 
-This is a server less version of the original [Midnigth Theme](https://github.com/mattgraham/midnight)  developed by [Matt
-Graham](http://madebygraham.com) for Github Pages.
+This is a config less version of the original [Midnigth Theme](https://github.com/mattgraham/midnight)  developed by [Matt
+Graham](http://madebygraham.com) for Github Pages. It will import project
+information from github repository metadata and from project readme file
+(README, README.md,...).
 
 ![Midnight Theme](http://f.cl.ly/items/2G0Q031t2K3h0F2i3V1E/Screen%20Shot%202012-12-25%20at%208.38.55%20AM.png)
 
@@ -9,17 +11,12 @@ The Midnight Pages demo is [here](http://lejenome.github.io/midnigth)
 
 # Install
 
-You need just to copy the content of this repository to your project gh-pages
-branch and change the first inline script tag inside the [index.html](index.html#L20) file.
+You just need to copy the content of this repository to your project gh-pages
+branch.
 
-e.g: here is my settings for this midnight project:
-
-```javascript
-  var GITHUB_USERNAME = "lejenome";
-  var GITHUB_REPONAME = "midnight";
-  var PROJECT_NAME = "Midnight";
-  var PROJECT_DESC = "Server Less GitHub Pages Theme";
-```
+Note: If your project name is not capitalized and you want to fix it, change
+```{{ site.github.project_title }}```
+in index.html with your project capitalized name.
 
 # Credits
 

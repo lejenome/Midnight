@@ -1,10 +1,11 @@
+--- ---
 <!doctype html>
 <html>
 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Midnight by lejenome</title>
+    <title>{{ site.github.project_title}} by {{ site.github.owner_name }}</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -16,12 +17,6 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script>
-      var GITHUB_USERNAME = "lejenome";
-      var GITHUB_REPONAME = "midnight";
-      var PROJECT_NAME = "Midnight";
-      var PROJECT_DESC = "Server Less GitHub Pages Theme";
-    </script>
 
   </head>
 
@@ -29,11 +24,11 @@
 
     <div id="header">
       <nav>
-        <li class="fork"><a id="fork" href="">View On GitHub</a>
+        <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a>
         </li>
-        <li class="downloads"><a id="zip" href="">ZIP</a>
+        <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a>
         </li>
-        <li class="downloads"><a id="tar" href="">TAR</a>
+        <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a>
         </li>
         <li class="title">DOWNLOADS</li>
       </nav>
@@ -47,7 +42,7 @@
           <h1 id="name"></h1>
           <p id="desc"></p>
           <hr>
-          <span class="credits left">Project maintained by <a id="user_url" href=""></a></span>
+          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}" id="user_url"></a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
         <div id="md">Loading Content...</div>
@@ -58,16 +53,11 @@
       function el(id) {
         return document.getElementById(id);
       }
-      document.title = PROJECT_NAME + " by " + GITHUB_USERNAME;
-      var url = el("user_url").href = "https://github.com/" + GITHUB_USERNAME;
-      el("fork").href = url = url + "/" + GITHUB_REPONAME;
-      el("zip").href = url + "/zipball/master";
-      el("tar").href = url + "/tarball/master";
-      el("user_url").textContent = GITHUB_USERNAME;
-      el("name").textContent = PROJECT_NAME;
-      el("desc").textContent = PROJECT_DESC;
+      el("user_url").textContent = "{{ site.github.owner_url }}";
+      el("name").textContent = "{{ site.github.project_title }}";
+      el("desc").textContent = "{{ site.github.project_tagline }}";
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://api.github.com/repos/" + GITHUB_USERNAME + "/" + GITHUB_REPONAME + "/readme");
+      xhr.open("GET", "{{ site.github.api_url }}/repos/{{ site.github.repository_nwo }}/readme");
       xhr.setRequestHeader("Accept", "application/vnd.github.v3.html");
       xhr.onload = function() {
         if (this.status !== 200) el("md").innerHTML = "<p>Ooops! Internal Error :(</p>";

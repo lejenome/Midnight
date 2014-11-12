@@ -54,7 +54,7 @@
       function el(id) {
         return document.getElementById(id);
       }
-      el("user_url").textContent = "{{ site.github.owner_url }}";
+      el("user_url").textContent = "{{ site.github.owner_name }}";
       el("name").textContent = "{{ site.github.project_title }}";
       el("desc").textContent = "{{ site.github.project_tagline }}";
       var xhr = new XMLHttpRequest();

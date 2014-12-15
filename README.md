@@ -16,7 +16,9 @@ branch.
 
 Note: If your project name is not capitalized and you want to fix it, replace
 every
-```{{ site.github.project_title | xml_escape }}```
+```erlang
+{{ site.github.project_title | xml_escape }}
+```
 in index.html with your project capitalized name.
 
 # Credits
